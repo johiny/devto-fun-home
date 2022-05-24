@@ -1,19 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
 import cardstyle from './cardstyle'
-const Card = ({className, img, link}) => {
+import CardOverly from './CardOverly'
+const Card = ({className, img, link, title, name}) => {
     const navigate = () => {
         window.location.href = link
     }
   return (
     <div className={className} onClick={() => navigate()}>
         <img src={img}/>
+    <CardOverly title={title} name={name} />    
     </div>
   )
 }
 
 export default styled(Card)`
 ${cardstyle}
+position: relative;
 display: flex;
 flex-direction: column;
 width: 60vh;

@@ -2,12 +2,12 @@ import React, { useContext } from 'react'
 import styled from 'styled-components'
 import Card from '../SimpleComponents/Card'
 import { DevtoContext } from '../contexts/DevtoContext'
-const Articles = ({className,children}) => {
+const Articles = ({className}) => {
     const {posts} = useContext(DevtoContext)
   return (
     <div className={className}>
         {posts.map((post => {
-            return <Card img={post.social_image} link={post.url} key={post.id}/>
+            return <Card img={post.social_image} link={post.url} key={post.id} title={post.title} name={post.user.name}/>
         }))}
     </div>
   )

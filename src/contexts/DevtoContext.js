@@ -1,14 +1,20 @@
 import React,{createContext,useState,useEffect} from "react";
-import DevtoMock from "../DevtoMock"
+import Jfetch from "../ultils/Jfetch";
 
 const DevtoContext = createContext(null)
 const DevtoProvider = ({children}) => {
 
-const [query,setQuery] = useState(null)
-const [posts,setposts] = useState(DevtoMock)
+const [query,setQuery] = useState("username=johiny")
+const [posts,setposts] = useState([])
+
+useEffect(() => {
+    Jfetch(query,setposts)
+    console.log(query)
+},[query])
+
 const Devto = {
     query : query,
-    setUser: setQuery,
+    setQuery: setQuery,
     posts : posts,
     setposts: setposts
 }
