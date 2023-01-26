@@ -1,5 +1,5 @@
 import sunIcon from "../images/icons8-sun-240.svg"
-import React, { useContext, useState } from 'react'
+import React, { useContext} from 'react'
 import styled from "styled-components"
 import { darkmode, lightmode } from "./Themes"
 import { ThemeContext } from "../contexts/ThemeContext"
@@ -7,7 +7,7 @@ import { ThemeContext } from "../contexts/ThemeContext"
 const ThemeChanger = (props) => {
  const {setTheme} = useContext(ThemeContext)
   return (
-    <img className={props.className} src={sunIcon} onClick={() => {
+    <img className={props.className} src={sunIcon} alt='black sun icon' onClick={() => {
         props.theme.name === "lightmode" ? setTheme(darkmode):setTheme(lightmode)
         console.log("hola")
     }}/>

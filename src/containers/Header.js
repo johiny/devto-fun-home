@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import devlogo from "../images/dev-badge.svg"
 import Row from '../SimpleComponents/Row'
@@ -8,7 +8,7 @@ const Header = ({className}) => {
     <div className={className}>
         <Row>
         <h1>Johiny's</h1>
-        <img src={devlogo}/>
+        <img src={devlogo} alt='webpage logo'/>
         <h1>Posts</h1>
         </Row>
     </div>

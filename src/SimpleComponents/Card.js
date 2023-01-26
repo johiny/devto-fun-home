@@ -8,7 +8,7 @@ const Card = ({className, img, link, title, name,theme}) => {
     }
   return (
     <div className={className} onClick={() => navigate()}>
-        <img src={img}/>
+        <img src={img} alt='devto article img'/>
     <CardOverly  theme={theme} title={title} name={name} />    
     </div>
   )

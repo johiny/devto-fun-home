@@ -4,7 +4,7 @@ import Jfetch from "../ultils/Jfetch";
 const DevtoContext = createContext(null)
 const DevtoProvider = ({children}) => {
 
-const [query,setQuery] = useState("username=johiny")
+const [query,setQuery] = useState("tag=react")
 const [posts,setposts] = useState([])
 
 useEffect(() => {
